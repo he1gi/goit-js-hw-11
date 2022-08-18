@@ -1,7 +1,7 @@
 import { fetchPictures } from './js/fetchPictures';
 import { Notify } from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
-// import 'simplelightbox/dist/simple-lightbox.min.css';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import './sass/index.scss';
 
 const refs = {
@@ -24,6 +24,7 @@ let perPage = 40;
 
 function onSearch(event) {
   event.preventDefault();
+  page = 1;
   refs.buttonEl.disabled = true;
   inputValue = refs.inputEl.value.trim();
   clearMarkup(refs.galleryEl);
