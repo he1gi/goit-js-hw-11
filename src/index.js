@@ -75,13 +75,17 @@ function renderMarkup(data) {
 const clearMarkup = element => (element.innerHTML = '');
 
 function createMarkUp(data) {
-  const markUp = (markup = data.reduce(
-    (
-      acc,
-      { webformatURL, tags, likes, views, comments, downloads, largeImageURL }
-    ) => {
-      return (
-        acc +
+  return data
+    .map(
+      ({
+        webformatURL,
+        tags,
+        likes,
+        views,
+        comments,
+        downloads,
+        largeImageURL,
+      }) =>
         `
         <a class="gallery__link" href="${largeImageURL}">
           <div class="gallery__item">
@@ -95,11 +99,8 @@ function createMarkUp(data) {
           </div>
         </a>
         `
-      );
-    },
-    ''
-  ));
-  return markUp;
+    )
+    .join('');
 }
 
 refs.searchForm.addEventListener('submit', onSearch);
