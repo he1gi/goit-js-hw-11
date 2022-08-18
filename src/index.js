@@ -1,8 +1,8 @@
 import { fetchPictures } from './js/fetchPictures';
 import { Notify } from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-import './sass/index.scss';
+// import 'simplelightbox/dist/simple-lightbox.min.css';
+// import './sass/index.scss';
 
 const refs = {
   searchForm: document.querySelector('.search-form'),
@@ -62,7 +62,7 @@ function updateList(entries) {
           );
           observer.unobserve(refs.guardEl);
         }
-        createMarkUp(data.data.hits);
+        renderMarkup(data.data.hits);
       });
     }
   });
