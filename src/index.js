@@ -2,7 +2,7 @@ import { fetchPictures } from './js/fetchPictures';
 import { Notify } from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 // import 'simplelightbox/dist/simple-lightbox.min.css';
-// import './sass/index.scss';
+import './sass/index.scss';
 
 const refs = {
   searchForm: document.querySelector('.search-form'),
