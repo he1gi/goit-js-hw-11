@@ -75,7 +75,7 @@ function renderMarkup(data) {
 const clearMarkup = element => (element.innerHTML = '');
 
 function createMarkUp(data) {
-  return (markup = data.reduce(
+  const markUp = (markup = data.reduce(
     (
       acc,
       { webformatURL, tags, likes, views, comments, downloads, largeImageURL }
@@ -99,6 +99,7 @@ function createMarkUp(data) {
     },
     ''
   ));
+  return markUp;
 }
 
 refs.searchForm.addEventListener('submit', onSearch);
